@@ -4,7 +4,7 @@
  * 一个简单的 babel-cli
  * 未做参数校验
  * 
- * ./myBabel/cli.js src --out-dir dist
+ * ./babel/cli.js src --out-dir dist
  */
 const fs = require('fs')
 const path = require('path')
