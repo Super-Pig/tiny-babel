@@ -10,7 +10,6 @@ const fs = require('fs')
 const path = require('path')
 const { transformSync } = require('./core')
 const config = require('../babel.config')
-const shell = require('shelljs')
 
 const args = process.argv
 const sourceDir = path.resolve(args[2])
@@ -19,7 +18,12 @@ const distDir = path.resolve(args[4])
 // 读取 src 目录下的文件列表
 const files = fs.readdirSync(sourceDir)
 
-shell.exec(`rm -rf ${distDir} && mkdir ${distDir}`)
+fs.rmSync(distDir, {
+    force: true,
+    recursive: true
+})
+
+fs.mkdirSync(distDir)
 
 /**
  * 遍历文件列表，逐个转换
