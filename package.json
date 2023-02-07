@@ -1,0 +1,11 @@
+{
+  "name": "hand-writing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "acorn": "^8.8.2",
+    "shelljs": "^0.8.5",
+    "yargs": "^17.6.2"
+  }
+}
