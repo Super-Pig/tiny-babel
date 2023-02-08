@@ -24,8 +24,6 @@ const TemplateLiteral = {
     enter: (node, parent) => {
         node.type = 'CallExpression'
 
-        let i = node.expressions.length - 1
-
         const buildCallee = (i) => {
             if (i === -1) {
                 return {
